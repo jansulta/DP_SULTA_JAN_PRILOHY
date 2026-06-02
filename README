@@ -2,15 +2,15 @@
 
 ## Požadavky
 
-Python 3.12 nebo novější
-Jupyter Notebook nebo JupyterLab
-Knihovny: `numpy`, `pandas`, `openpyxl`, `PuLP`
+- Python 3.12 nebo novější
+- Jupyter Notebook nebo JupyterLab
+- Knihovny: `numpy`, `pandas`, `openpyxl`, `PuLP`
 
 ## Instalace a spuštění
 
 1. Stáhněte repozitář:
-   : **ZIP:** tlačítko **Code → Download ZIP**, rozbalte složku `DP_SULTA_JAN_PRILOHY-main`
-   : **Git:** `git clone https://github.com/jansulta/DP_SULTA_JAN_PRILOHY.git`
+   - **ZIP:** tlačítko **Code → Download ZIP**, rozbalte složku `DP_SULTA_JAN_PRILOHY-main`
+   - **Git:** `git clone https://github.com/jansulta/DP_SULTA_JAN_PRILOHY.git`
 
 2. Nainstalujte potřebné knihovny:
 
@@ -25,13 +25,13 @@ cd DP_SULTA_JAN_PRILOHY
 jupyter notebook
 ```
 
-4. Otevřete libovolný notebook. Dataset `small_dataset.xlsx` se načte automaticky: pokud jsou notebook a dataset ve stejném adresáři, není třeba nic upravovat.
+4. Otevřete libovolný notebook. Dataset `small_dataset.xlsx` se načte automaticky. Pokud jsou notebook a dataset ve stejném adresáři, není třeba nic upravovat.
 
 ## Obsah repozitáře
 
 | Soubor | Popis |
 |--------|-------|
-| `small_dataset.xlsx` | Syntetická instance: 30 uzlů (29 zákazníků + 1 depot) |
+| `small_dataset.xlsx` | Syntetická instance, 30 uzlů (29 zákazníků + 1 depot) |
 | `DP_SULTA_JAN_MILP.ipynb` | Referenční MILP model (solver PuLP/CBC) |
 | `DP_SULTA_JAN_HS.ipynb` | Metoda Harmony Search |
 | `DP_SULTA_JAN_ACO.ipynb` | Metoda Ant Colony Optimization |
@@ -45,7 +45,7 @@ Každý notebook obsahuje v úvodních buňkách konfigurační třídu. Níže 
 
 ### MILP
 
-**Buňka 2** : sekce *1. Konfigurace parametrů instance*, třída `Config`:
+**Buňka 2**, sekce *1. Konfigurace parametrů instance*, třída `Config`
 
 | Parametr | Výchozí | Popis |
 |----------|---------|-------|
@@ -58,22 +58,22 @@ Každý notebook obsahuje v úvodních buňkách konfigurační třídu. Níže 
 
 ### Harmony Search
 
-Parametry instance: **buňka 1** : úvodní buňka s importy, třída `Config` (shodná s MILP).
+Parametry instance: **buňka 1**, úvodní buňka s importy, třída `Config` (shodná s MILP).
 
-Parametry algoritmu: **buňka 11** : sekce *10. Spuštění experimentu*, volání funkce `harmony_search(...)`:
+Parametry algoritmu: **buňka 11**, sekce *10. Spuštění experimentu*, volání `harmony_search(...)`
 
 | Parametr | Výchozí | Popis |
 |----------|---------|-------|
 | `HMS` | 20 | Velikost Harmony Memory |
 | `NI` | 1000 | Počet iterací |
 | `HMCR` | 0.90 | Pravděpodobnost využití paměti |
-| `PAR` | 0.20 | Pravděpodobnost operátoru φ(·) |
+| `PAR` | 0.20 | Pravděpodobnost operátoru pitch adjustment |
 
 ### Ant Colony Optimization
 
-Parametry instance: **buňka 1** : úvodní buňka s importy, třída `Config` (shodná s MILP).
+Parametry instance: **buňka 1**, úvodní buňka s importy, třída `Config` (shodná s MILP).
 
-Parametry algoritmu: **buňka 4** : sekce *3. Parametry ACO a inicializace feromonové matice*, třída `ACOParams`:
+Parametry algoritmu: **buňka 4**, sekce *3. Parametry ACO a inicializace feromonové matice*, třída `ACOParams`
 
 | Parametr | Výchozí | Popis |
 |----------|---------|-------|
@@ -86,9 +86,9 @@ Parametry algoritmu: **buňka 4** : sekce *3. Parametry ACO a inicializace ferom
 
 ### Beam Search
 
-Parametry instance: **buňka 1** : úvodní buňka s importy, třída `Config` (shodná s MILP).
+Parametry instance: **buňka 1**, úvodní buňka s importy, třída `Config` (shodná s MILP).
 
-Parametry algoritmu: **buňka 4** : sekce *3. Parametry Beam Search*, třída `BeamParams`:
+Parametry algoritmu: **buňka 4**, sekce *3. Parametry Beam Search*, třída `BeamParams`
 
 | Parametr | Výchozí | Popis |
 |----------|---------|-------|
